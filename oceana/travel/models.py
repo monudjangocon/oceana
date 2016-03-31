@@ -7,6 +7,7 @@ class Guest(models.Model):
     phone_pattern = RegexValidator(regex=r'^\+?1?\d{9,15}$', message="Phone number must be entered in the format: '+91'. Up to 1o digits")
     phone = models.CharField(validators=[phone_pattern],max_length=30)
     email=models.EmailField(max_length=75)
+    image=models.ImageField(upload_to="ritu",null=True)
 
     def __unicode__(self):
         return str(self.name)

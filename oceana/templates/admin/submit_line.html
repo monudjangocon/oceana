@@ -1,0 +1,31 @@
+{% load i18n admin_urls %}
+
+{% block extrastyle %}
+     
+
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+{% endblock %}
+
+
+<div class="submit-row">
+
+     {% if show_save %}
+       <input type="submit" class="btn btn-warning btn-lg" value="{% trans 'Save' %}"  name="_save" />
+
+     {% endif %}
+
+
+   {% if show_delete_link %}
+      {% url opts|admin_urlname:'delete' original.pk|admin_urlquote as delete_url %}
+        <p class="deletelink-box"><a href="{% add_preserved_filters delete_url %}" <span class="glyphicon glyphicon-minus-sign"></span>{% trans "Delete" %}</a></p>
+      {% endif %}
+
+    {% if show_save_as_new %}
+       <input type="submit" class="btn btn-success" value="{% trans 'Save as new' %}" name="_saveasnew" />
+
+    {% endif %}
+
+
+</div>

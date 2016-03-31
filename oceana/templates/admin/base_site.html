@@ -1,0 +1,28 @@
+{% extends "admin/base.html" %}
+
+{% block title %}Log In | RituPycon{% endblock %}
+
+{% block extrastyle %}
+    
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+<style>
+  #header{
+    background: green;
+    color:orange;
+  }
+
+</style>
+
+  
+
+
+
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}"><span style="margin-left:110px; font-size:20px;">RituPycon Admin</span></a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+ 
