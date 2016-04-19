@@ -1,0 +1,39 @@
+.wrapper{
+
+	width:500px;
+	height:300px;
+     margin:0 auto;
+}
+
+#plus{
+
+	cursor:pointer;
+
+}
+
+#plus:hover{
+	color:red;
+	}
+
+
+
+	.guest_form{
+
+    
+	margin:0 auto;
+
+
+}
+
+
+.guest{
+  width:500px;
+
+}
+
+
+.user{
+	margin-top:40px;
+	margin-left:30px;
+}
+

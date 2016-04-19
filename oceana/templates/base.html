@@ -1,0 +1,132 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>{% block title %}Welcome | Internshala{% endblock %}</title>
+
+    
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+  
+  <!-- Optional theme 
+ -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/navbar-static-top/navbar-static-top.css" rel="stylesheet">
+    
+
+    </style>
+    <script src="http://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script src="http://malsup.github.io/min/jquery.cycle2.min.js"></script>
+       <link rel="stylesheet" href="{% static 'css/intern.css' %}">
+       <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block head %}{% endblock head %}
+  </head>
+
+  <body>
+
+
+       
+
+  <div class="container">
+
+
+    {% block content %}
+
+         <div class="user">
+        
+             <h3>Admin Panel</h3>
+             <br>
+               <div class="col-md-5">
+                  <p><a href="/travel/guests/">Guests</a></p><br>
+                  <p><a href="/travel/enquiry/">Enquiry</a></p><br>
+               </div>
+
+               <div class="col-md-7">
+                  <p><a href="/guest/">Add Guest<span class="glyphicon glyphicon-plus-sign"></a></span>
+                   <a href="/travel/guests/">Change<span class="glyphicon glyphicon-pencil"></a></span></p><br>
+                 
+                  <p><a href="/enquiry/">Add Enquiry<span class="glyphicon glyphicon-plus-sign"></a></span>
+                   <a href="/travel/enquiry/">Change<span class="glyphicon glyphicon-pencil"></a></span></p>
+               </div>
+             
+              </div>
+             
+
+      
+
+    {% endblock %}
+
+</div>
+
+
+    
+         
+
+        
+  
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="{% static 'js/intern.js' %}"></script>
+
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

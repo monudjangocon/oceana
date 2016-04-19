@@ -1,27 +1,30 @@
 /* DASHBOARD */
 
 .dashboard .module table th {
-    width: 50%;
+    width: 100%;
 }
 
 .dashboard .module table td {
     white-space: nowrap;
-	padding:20px;
-    margin:auto;
-    font-size:20px;
 }
 
 .dashboard .module table td a {
     display: block;
-    padding-right: 2em;
+    padding-right: .6em;
 }
 
 /* RECENT ACTIONS MODULE */
 
 .module ul.actionlist {
-    margin-left: 10px;
+    margin-left: 0;
 }
 
-.dashboard #content{
-    width:auto;
+ul.actionlist li {
+    list-style-type: none;
+}
+
+ul.actionlist li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
 }

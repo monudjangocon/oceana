@@ -1,0 +1,54 @@
+ {% extends "base.html" %}
+ {% load staticfiles %}
+
+    {% block head %}
+
+
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <script src="{% static 'js/base.js' %}"></script>
+
+
+    {% endblock head %}
+
+
+{% block content %}
+<div class="guest_form">
+     <div class="container form-container">
+        <form class="extra-box-shadow" method="POST" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h3 class="title">Add Guest</h3>
+             <hr class="divider">
+
+            <div class="wrapper">
+                {% if error %}
+                    <div class="alert alert-danger alert-custom" role="alert"><strong>Error!</strong> {{ error }}</div>
+                {% endif %}
+                   
+                  <label class="form-label" for="phone">Name*</label>
+                <input type="text" class="form-control form-input guest" name="name" placeholder="Enter name" required="" value="{{ previous_post_data.name }}">
+
+                <label class="form-label" for="phone">Phone*</label>
+                <input type="text" class="form-control form-input guest"  name="phone" placeholder="Enter your Phone number.." required="" value="{{ previous_post_data.phone }}">
+
+
+                <label class="form-label" for="email">Email*</label>
+                <input type="email" class="form-control form-input guest" name="email" placeholder="example@abc.com" required="" value="{{ previous_post_data.email }}"/>
+
+
+                <br>
+
+                
+ 
+            <button class="btn btn-sm btn-info button-signup" style="float:right;" type="submit">Save and Add another</button>
+ 
+                <button class="btn btn-sm btn-warning button-signup" style="float:right;" type="submit">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+  
+
+{% endblock %}

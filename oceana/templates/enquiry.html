@@ -1,0 +1,70 @@
+ {% extends "base.html" %}
+ {% load staticfiles %}
+
+    {% block head %}
+
+
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <script src="{% static 'js/base.js' %}"></script>
+
+
+    {% endblock head %}
+
+
+{% block content %}
+
+   <div class="container form-container">
+        <form class="form-signup extra-box-shadow" method="POST" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h3 class="title">Add Enquiry</h3>
+            <hr class="divider">
+
+            <div class="wrapper">
+                {% if error %}
+                    <div class="alert alert-danger alert-custom" role="alert"><strong>Error!</strong> {{ error }}</div>
+                {% endif %}
+
+                <p><span id="plus" data-toggle="modal" data-target="#ritu" class="glyphicon glyphicon-plus-sign"></span>
+                <input type="text" class="form-control form-input" name="guest" placeholder="guest" required="" value="{{ previous_post_data.name }}"></p>
+
+                <label class="form-label" for="last_name">Address*</label>
+                <input type="text" class="form-control form-input" name="address" placeholder="Address here.." style="width:500px;height:200px;" required="" value="{{ previous_post_data.phone }}">
+
+                <br>
+
+                 <button class="btn btn-sm btn-info button-signup" style="float:right;" type="submit">Save and Add another</button>
+ 
+                <button class="btn btn-sm btn-warning button-signup" style="float:right;" type="submit">Save</button>
+            </div>
+        </form>
+    </div>
+
+
+
+      <div class="modal fade" id="ritu">
+                  <div class="modal-dialog">
+                       <div class="modal-content">
+                         <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                             <div id="user-menu-container">
+                               <div id="user-menu">
+                                <div class="row">
+                                  <div class="col-xs-6 user-menu-item active" id="student">
+                                    <h3>Add Guest</h3>
+                                 </div>
+                                  
+                                </div> 
+                           </div>
+                          </div>
+                       </div>
+                         <div class="modal-body">
+                
+                            {% include 'guest.html' %}
+                         </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

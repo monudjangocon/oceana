@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+ {% block head %}
+
+
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <script src="{% static 'js/base.js' %}"></script>
+
+
+    {% endblock head %}
+
+
+{% block content %}
+  <div class="user">
+
+   <div class="container">
+   	   <h2 style="color:green;font-size:20px;">Select users to change...</h2>
+   		<div class="row">
+   			 <div class="col-md-4">
+                   <p style="color:green;font-size:20px;">Name</p>
+     </div>
+         <div class="col-md-4">
+         <p style="color:green;font-size:20px;">Phone</p>
+     </div>
+
+          <div class="col-md-4">
+         <p style="color:green;font-size:20px;">Email</p>
+     </div>
+   		</div>
+   
+    {% for guests in guests %}
+     <div class="col-md-4">
+         <a href="/guest/">{{guests.name }}</a>
+     </div>
+   	   
+   	    <div class="col-md-4">
+          {{guests.phone}}
+      </div>
+   	   
+   	    <div class="col-md-4">
+          {{guests.email}}
+     </div>
+   	   
+   	   <br>
+           
+   	   {% endfor %}
+   </div>
+  </div>
+{% endblock %}
